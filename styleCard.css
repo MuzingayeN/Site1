@@ -1,0 +1,163 @@
+/* RESET STYLES */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* GENERAL STYLES */
+
+:root {
+    --ff-sd: "Big Shoulders Display", cursive;
+    --ff-ld: "Lexend Deca", sans-serif;
+
+    --color-y: #e28625;
+    --color-b: #006971;
+    --color-g: #004140;
+    --color-w: #fff;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f2f2f2;
+}
+
+/* TEXT */
+
+.heading-2 {
+    font-family: var(--ff-sd);
+    color: #f2f2f2;
+    font-size: 4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+}
+
+.paragraph {
+    font-family: var(--ff-ld);
+    color: var(--color-w);
+    opacity: 0.75;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 2.5rem;
+    margin-bottom: 8.3rem;
+}
+
+/* BTN */
+
+.btn {
+    border: none;
+    background-color: var(--color-w);
+    border-radius: 50rem;
+    padding: 1.2rem 3rem 1.3rem 3rem;
+    border: 0.2rem transparent solid;
+
+    font-family: var(--ff-ld);
+    font-size: 1.5rem;
+    font-weight: 400;
+
+    cursor: pointer;
+    transition: color 0.15s, background-color 0.15s, transform 0.15s;
+}
+
+.btn:hover {
+    color: var(--color-w);
+    background-color: transparent;
+    border: 0.2rem var(--color-w) solid;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.btn--1 {
+    color: var(--color-y);
+}
+
+.btn--2 {
+    color: var(--color-b);
+}
+
+.btn--3 {
+    color: var(--color-g);
+}
+
+/* CARD GENERAL STYLES */
+
+.cards {
+    width: 92rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-radius: 0.8rem;
+    overflow: hidden;
+}
+
+/* CARD */
+
+.card {
+    padding: 4.8rem;
+}
+
+.card--1 {
+    background-color: var(--color-y);
+}
+
+.card--2 {
+    background-color: var(--color-b);
+}
+
+.card--3 {
+    background-color: var(--color-g);
+}
+
+.card__icon {
+    margin-bottom: 3.5rem;
+}
+
+/* MEDIA QUERIES */
+
+/* 960/16=60 */
+@media only screen and (max-width: 60em) {
+    html {
+        font-size: 8px;
+    }
+}
+
+/* 768/16=48 */
+@media only screen and (max-width: 48em) {
+    html {
+        font-size: 6px;
+    }
+}
+
+/* 560/16=35 */
+@media only screen and (max-width: 35em) {
+    html {
+        font-size: 10px;
+    }
+
+    .cards {
+        grid-template-columns: revert;
+        width: revert;
+        margin: 2.4rem;
+    }
+
+    .paragraph {
+        margin-bottom: 2.5rem;
+    }
+}
+
+/* END */
